@@ -204,6 +204,7 @@ export default {
     },
     maxSignaturesCount: 2,
     signatureFonts: ['GreatVibes-Regular'],
+    signatureType: 'default',
     leftPanelWidth: 300,
     isReplyDisabledFunc: null,
     userData: [],

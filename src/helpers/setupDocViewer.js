@@ -1,4 +1,7 @@
 import core from 'core';
+import getSignatureType from "src/apis/getSignatureType";
+import setMaxSignaturesCount from "src/apis/setMaxSignaturesCount";
+import setSignaturesType from "src/apis/setSignatureType";
 
 const setupDocViewer = () => {
   const docViewer = core.getDocumentViewer();

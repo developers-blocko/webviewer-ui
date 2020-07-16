@@ -62,6 +62,7 @@ import goToFirstPage from './goToFirstPage';
 import goToLastPage from './goToLastPage';
 import goToNextPage from './goToNextPage';
 import goToPrevPage from './goToPrevPage';
+import getSignatureType from './getSignatureType'
 import hotkeys from './hotkeys';
 import isAdminUser from './isAdminUser';
 import isElementDisabled from './isElementDisabled';
@@ -135,6 +136,7 @@ import setNoteTransformFunction from './setNoteTransformFunction';
 import selectThumbnailPages from './selectThumbnailPages';
 import unselectThumbnailPages from './unselectThumbnailPages';
 import setSearchResults from './setSearchResults';
+import setSignatureType from './setSignatureType';
 
 export default store => {
   window.readerControl = {
@@ -211,6 +213,8 @@ export default store => {
     mentions: mentions(store),
     setCustomMeasurementOverlayInfo: setCustomMeasurementOverlayInfo(store),
     setSignatureFonts: setSignatureFonts(store),
+    setSignatureType: setSignatureType(store),
+    getSignatureType : getSignatureType(store),
     setSelectedTab: setSelectedTab(store),
     getSelectedThumbnailPageNumbers: getSelectedThumbnailPageNumbers(store),
     selectThumbnailPages: selectThumbnailPages(store),

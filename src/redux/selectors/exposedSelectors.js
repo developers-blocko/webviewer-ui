@@ -126,6 +126,8 @@ export const getIsMentionEnabled = state => !!state.viewer.userData;
 
 export const getSignatureFonts = state => state.viewer.signatureFonts;
 
+export const getSignatureType = state => state.viewer.signatureType;
+
 export const getSelectedTab = (state, id) => state.viewer.tab[id];
 
 export const getCustomElementOverrides = (state, dataElement) => state.viewer.customElementOverrides[dataElement];

@@ -214,10 +214,17 @@ export const useEmbeddedPrint = (useEmbeddedPrint = true) => ({
   type: 'USE_EMBEDDED_PRINT',
   payload: { useEmbeddedPrint },
 });
+
 export const setMaxSignaturesCount = maxSignaturesCount => ({
   type: 'SET_MAX_SIGNATURES_COUNT',
   payload: { maxSignaturesCount },
 });
+
+export const setSignatureType = signatureType => ({
+  type: 'SET_SIGNATURE_TYPE',
+  payload: { signatureType },
+});
+
 export const setUserData = userData => ({
   type: 'SET_USER_DATA',
   payload: { userData },
