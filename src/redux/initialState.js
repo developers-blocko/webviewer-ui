@@ -203,7 +203,7 @@ export default {
       to: ['in', 'mm', 'cm', 'pt', 'ft', 'm', 'yd', 'km', 'mi'],
     },
     maxSignaturesCount: 2,
-    signatureFonts: ['GreatVibes-Regular'],
+    signatureFonts: ['GreatVibes-Regular', 'Nanum Brush Script', 'NanumMyeongjo'],
     signatureType: 'default',
     leftPanelWidth: 300,
     isReplyDisabledFunc: null,

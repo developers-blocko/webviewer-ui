@@ -16,12 +16,14 @@ import actions from 'actions';
 import selectors from 'selectors';
 
 import './SignatureModal.scss';
+import fireEvent from "helpers/fireEvent";
 
 const SignatureModal = () => {
-  const [isDisabled, isSaveSignatureDisabled, isOpen] = useSelector(state => [
+  const [isDisabled, isSaveSignatureDisabled, isOpen , signatureType] = useSelector(state => [
     selectors.isElementDisabled(state, 'signatureModal'),
     selectors.isElementDisabled(state, 'saveSignatureButton'),
     selectors.isElementOpen(state, 'signatureModal'),
+    selectors.getSignatureType(state)
   ]);
   const dispatch = useDispatch();
   const [saveSignature, setSaveSignature] = useState(false);
@@ -49,7 +51,7 @@ const SignatureModal = () => {
         ]),
       );
     }
-  }, [_setSaveSignature, dispatch, isOpen]);
+  }, [_setSaveSignature, dispatch, isOpen, signatureType]);
 
   const closeModal = () => {
     signatureTool.clearLocation();
@@ -65,9 +67,11 @@ const SignatureModal = () => {
     if (!signatureTool.isEmptySignature()) {
       if (saveSignature) {
         signatureTool.saveSignatures(signatureTool.annot);
+        fireEvent('savedSignature', signatureTool.annot);
       }
       if (signatureTool.hasLocation()) {
         signatureTool.addSignature();
+        fireEvent('savedSignature', signatureTool.annot);
       } else {
         signatureTool.showPreview();
       }
@@ -92,9 +96,11 @@ const SignatureModal = () => {
         <Tabs id="signatureModal">
           <div className="header">
             <div className="tab-list">
-              <Tab dataElement="inkSignaturePanelButton">
-                <Button label={t('action.draw')} />
-              </Tab>
+              {signatureType === 'test' ? null :
+                  <Tab dataElement="inkSignaturePanelButton">
+                    <Button label={t('action.draw')}/>
+                  </Tab>
+              }
               <Tab dataElement="textSignaturePanelButton">
                 <Button label={t('action.type')} />
               </Tab>
