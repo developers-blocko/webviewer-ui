@@ -15,7 +15,7 @@ const propTypes = {
   isTabPanelSelected: PropTypes.bool,
 };
 
-const FONT_SIZE = 50;
+const FONT_SIZE = 30;
 
 const TextSignature = ({
   isModalOpen,
@@ -76,13 +76,19 @@ const TextSignature = ({
       // ctx.clearRect(0, 0, width, height);
       // ctx.fillText(value, width / 2, height / 2);
       ctx.beginPath();
-      ctx.ellipse(width / 2, height / 2, 10, 20, 0, 0, 2 * Math.PI);
+      ctx.lineWidth = 10;
+      ctx.strokeStyle = 'red';
+      ctx.ellipse(width / 2, height / 2, FONT_SIZE  + 10 , height/2 - 20, 0, 0, 2 * Math.PI);
       ctx.stroke();
-      ctx.beginPath();
-      ctx.setLineDash([5, 5]);
-      ctx.moveTo(0, width);
-      ctx.lineTo(height, 0);
-      ctx.stroke();
+
+      const oneValueX = width / 2;
+      let oneValueY = FONT_SIZE * 2 + 10;
+      ctx.fillStyle = 'red';
+      for (let k = 0; k < value.length; k++) {
+        let oneValue = value.substring(k, k + 1);
+        ctx.fillText(oneValue, oneValueX, oneValueY);
+        oneValueY += FONT_SIZE + (FONT_SIZE / 2);
+      }
     };
 
     if (isTabPanelSelected) {

@@ -10,7 +10,7 @@
   background: $gray4;
   background: var(--secondary-color);
   transition: transform .3s ease, visibility 0s .3s ease;
-  
+
   @include mobile {
     top: 0px;
     width: 100%;
@@ -55,9 +55,9 @@
   @include closed(translateX(-100%));
   width: 300px;
   width: $left-panel-width;
-  left: 0;
-  border-right: 1px solid $gray12;
-  border-right: 1px solid var(--border-color);
+  right: 0;
+  border-left: 1px solid $gray12;
+  border-left: 1px solid var(--border-color);
   @include mobile {
     z-index: 100; // Need to be above search overlay
     width: 100%;

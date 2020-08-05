@@ -74,7 +74,7 @@ const LeftPanel = () => {
         <LeftPanelTabs />
       </div>
 
-      <ResizeBar />
+      {/*<ResizeBar />*/}
 
       <ErrorBoundary>
         <NotesPanel display={getDisplay('notesPanel')} />

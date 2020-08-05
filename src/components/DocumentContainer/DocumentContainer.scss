@@ -8,6 +8,8 @@
   overflow: auto;
   transition: all .3s ease;
   user-select: none;
+  box-shadow: inset 0 -1px 0 0 #eeeeee;
+  background-color: #ebecf0;
 
   @include mobile {
     width: 100%;
@@ -25,7 +27,7 @@
 
   &.left-panel {
     width: calc(100% - #{$left-panel-width});
-    margin-left: $left-panel-width;
+    margin-right: $left-panel-width;
 
     @include mobile {
       width: 100%;
