@@ -115,8 +115,8 @@ class ZoomOverlay extends React.PureComponent {
             buttonName={`${zoomValue * 100}%`}
           />
         ))}
-        <div className="spacer" />
-        <ToolButton toolName="MarqueeZoomTool" label={t('tool.Marquee')} />
+        {/*<div className="spacer" />*/}
+        {/*<ToolButton toolName="MarqueeZoomTool" label={t('tool.Marquee')} />*/}
       </div>
     );
   }

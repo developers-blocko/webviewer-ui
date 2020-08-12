@@ -97,7 +97,7 @@ class PageNavOverlay extends React.PureComponent {
       return null;
     }
 
-    const className = getClassName(`Overlay PageNavOverlay ${isLeftPanelOpen && !isLeftPanelDisabled ? 'shifted' : ''}`, this.props);
+    const className = getClassName(`Overlay PageNavOverlay ''}`, this.props);
 
     return (
       <div className={className} data-element="pageNavOverlay" onClick={this.onClick}>
