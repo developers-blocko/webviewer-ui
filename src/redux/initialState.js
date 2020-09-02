@@ -18,7 +18,6 @@ export default {
     },
     headers: {
       default: [
-        // { type: 'toggleElementButton', img: 'ic_left_sidebar_black_24px', element: 'leftPanel', dataElement: 'leftPanelButton', title: 'component.leftPanel' },
         // { type: 'divider', hidden: ['tablet', 'mobile'] },
         // { type: 'toggleElementButton', img: 'ic_viewer_settings_black_24px', element: 'viewControlsOverlay', dataElement: 'viewControlsButton', title: 'component.viewControlsOverlay' },
         // { type: 'toolButton', toolName: 'Pan' },
@@ -50,20 +49,22 @@ export default {
         // { type: 'toolButton', toolName: 'AnnotationCreateFreeText', hidden: ['tablet', 'mobile'] },
         // { type: 'toolButton', toolName: 'AnnotationCreateSticky', hidden: ['tablet', 'mobile'] },
         // { type: 'toolGroupButton', toolGroup: 'miscTools', img: 'ic_more_black_24px', dataElement: 'miscToolGroupButton', title: 'component.miscToolsButton', hidden: ['tablet', 'mobile'], showColor: 'never' },
-        {
-          type: 'actionButton',
-          img: 'ic_edit_black_24px',
-          onClick: dispatch => {
-            dispatch(actions.setActiveHeaderGroup('tools'));
-            core.setToolMode(defaultTool);
-            dispatch(actions.closeElements(['viewControlsOverlay', 'searchOverlay', 'menuOverlay', 'searchPanel', 'leftPanel', 'zoomOverlay', 'redactionOverlay']));
-          },
-          dataElement: 'toolsButton',
-          title: 'component.toolsButton',
-          hidden: ['desktop'],
-        },
-        { type: 'divider', hidden: ['tablet', 'mobile'] },
-        { type: 'toggleElementButton', dataElement: 'searchButton', element: 'searchOverlay', img: 'ic_search_black_24px', title: 'component.searchOverlay' },
+        // {
+        //   type: 'actionButton',
+        //   img: 'ic_edit_black_24px',
+        //   onClick: dispatch => {
+        //     dispatch(actions.setActiveHeaderGroup('tools'));
+        //     core.setToolMode(defaultTool);
+        //     dispatch(actions.closeElements(['viewControlsOverlay', 'searchOverlay', 'menuOverlay', 'searchPanel', 'leftPanel', 'zoomOverlay', 'redactionOverlay']));
+        //   },
+        //   dataElement: 'toolsButton',
+        //   title: 'component.toolsButton',
+        //   hidden: ['desktop'],
+        // },
+        // { type: 'divider', hidden: ['tablet', 'mobile'] },
+        { type: 'toggleElementButton', img: 'ic_left_sidebar_black_24px', element: 'leftPanel', dataElement: 'leftPanelButton', title: 'component.leftPanel' },
+        // { type: 'divider', hidden: ['tablet', 'mobile'] },
+        // { type: 'toggleElementButton', dataElement: 'searchButton', element: 'searchOverlay', img: 'ic_search_black_24px', title: 'component.searchOverlay' },
         // { type: 'toggleElementButton', dataElement: 'menuButton', element: 'menuOverlay', img: 'ic_overflow_black_24px', title: 'component.menuOverlay' },
       ],
       tools: [
@@ -204,9 +205,9 @@ export default {
       to: ['in', 'mm', 'cm', 'pt', 'ft', 'm', 'yd', 'km', 'mi'],
     },
     maxSignaturesCount: 5,
-    signatureFonts: ['GreatVibes-Regular', 'Nanum Brush Script', 'NanumMyeongjo'],
+    signatureFonts: ['GreatVibes-Regular'],
     signatureType: 'default',
-    leftPanelWidth: 300,
+    leftPanelWidth: 200,
     isReplyDisabledFunc: null,
     userData: [],
     customMeasurementOverlay: [],

@@ -1,4 +1,17 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="m0 0h24v24h-24z" fill="none"/>
-  <path d="m7 11v2h10v-2zm5-9c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="36" viewBox="0 0 36 36">
+    <defs>
+        <filter id="9g22bhrpxa" width="125%" height="125%" x="-12.5%" y="-9.2%" filterUnits="objectBoundingBox">
+            <feMorphology in="SourceAlpha" operator="dilate" radius=".25" result="shadowSpreadOuter1"/>
+            <feOffset dy="1" in="shadowSpreadOuter1" result="shadowOffsetOuter1"/>
+            <feGaussianBlur in="shadowOffsetOuter1" result="shadowBlurOuter1" stdDeviation="1"/>
+            <feComposite in="shadowBlurOuter1" in2="SourceAlpha" operator="out" result="shadowBlurOuter1"/>
+            <feColorMatrix in="shadowBlurOuter1" values="0 0 0 0 0.704860683 0 0 0 0 0.752803673 0 0 0 0 0.867866848 0 0 0 1 0"/>
+        </filter>
+        <circle id="r1zripnpgb" cx="15" cy="15" r="15"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(3 2)">
+        <use fill="#000" filter="url(#9g22bhrpxa)" xlink:href="#r1zripnpgb"/>
+        <use fill="#F9FAFD" stroke="#E6E9F1" stroke-width=".5" xlink:href="#r1zripnpgb"/>
+        <path fill="#696D75" fill-rule="nonzero" d="M19.368 15.762L19.368 14.25 10.5 14.25 10.5 15.762z"/>
+    </g>
 </svg>

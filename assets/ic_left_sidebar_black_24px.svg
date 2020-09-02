@@ -1,4 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-  <path d="m0 0h24v24h-24z" fill="none"/>
-  <path d="m21 4c1.1 0 2 .9 2 2v13c0 1.1-.9 2-2 2h-18c-1.1 0-2-.9-2-2v-13c0-1.1.9-2 2-2zm0 15v-13h-12v13zm-18-8.5v1.5h4v-1.5zm0-2.5v1.5h4v-1.5zm0 5v1.5h4v-1.5zm0 2.5v1.5h4v-1.5z"/>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="42" height="42" viewBox="0 0 42 42">
+    <defs>
+        <path id="s9e3g9ap2a" d="M23 0c.552 0 1 .448 1 1v16c0 .552-.448 1-1 1H1c-.552 0-1-.448-1-1V1c0-.552.448-1 1-1h22zm0 12h-3v4h3v-4zm0-5h-3v4h3V7zm0-5h-3v4h3V2z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd" transform="translate(9 12)">
+        <mask id="mvdirpmucb" fill="#fff">
+            <use xlink:href="#s9e3g9ap2a"/>
+        </mask>
+        <use stroke="#696D75" xlink:href="#s9e3g9ap2a"/>
+        <path fill="#696D75" fill-rule="nonzero" d="M24.65 18.625L18.65 18.625 18.65 -0.375 24.65 -0.375z" mask="url(#mvdirpmucb)"/>
+    </g>
 </svg>
